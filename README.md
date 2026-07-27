@@ -1,5 +1,9 @@
 # 🚀 NUML Career Hub
 
+A simple website that helps NUML students discover software houses in Islamabad and quickly access their official LinkedIn and Career pages.
+
+🌐 Live Demo: (Vercel link yahan add karna)
+
 NUML Career Hub is a simple web application designed to help NUML students quickly discover software houses in Islamabad and access their official LinkedIn and Career pages from one place.
 
 Instead of manually searching for companies, students can use this platform to explore opportunities and connect directly with software houses.
