@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+  }
+  
+  body {
+    background-color: #0d0e0a;
+    color: #f5f5f4;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Sleek Interface accent color highlights */
+.text-olive-accent {
+  color: #a3e635;
+}
+
+.bg-olive-accent {
+  background-color: #a3e635;
+}
+
+.bg-olive-muted {
+  background-color: rgba(163, 230, 53, 0.12);
+}
+
+.border-olive-subtle {
+  border-color: #2d3322;
+}
+
+.border-olive-active {
+  border-color: #a3e635;
+}
+
+/* Glass & Card styles */
+.dark-card {
+  background-color: #1a1d14;
+  border: 1px solid #2d3322;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark-card:hover {
+  border-color: #a3e635;
+  box-shadow: 0 14px 40px -10px rgba(163, 230, 53, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0e0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #2d3322;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a422b;
+}
+

@@ -1,0 +1,6 @@
+{
+  "name": "NUML Career Hub",
+  "description": "Directory for NUML students to discover software houses in Islamabad and Rawalpindi and quickly access their official LinkedIn and Career pages.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
