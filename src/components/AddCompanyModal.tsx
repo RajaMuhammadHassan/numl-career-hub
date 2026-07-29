@@ -38,43 +38,26 @@ export const AddCompanyModal: React.FC<AddCompanyModalProps> = ({
     setSubmitting(true);
     setErrorMessage('');
 
-    try {
-      const response = await fetch('/api/companies', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: name.trim(),
-          city,
-          linkedin_url: linkedinUrl.trim(),
-          career_url: careerUrl.trim(),
-          logo: logoUrl.trim() || undefined,
-        }),
-      });
+    const newCompany: Company = {
+      id: Date.now().toString(),
+      name: name.trim(),
+      city,
+      linkedin_url: linkedinUrl.trim(),
+      career_url: careerUrl.trim(),
+      logo: logoUrl.trim() || 'https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=120&auto=format&fit=crop&q=80',
+    };
 
-      if (!response.ok) {
-        throw new Error('Failed to add company to database');
-      }
-
-      const data = await response.json();
-      if (data.company) {
-        onCompanyAdded(data.company);
-        setSuccessMessage(true);
-        setTimeout(() => {
-          setSuccessMessage(false);
-          setName('');
-          setLinkedinUrl('');
-          setCareerUrl('');
-          setLogoUrl('');
-          onClose();
-        }, 1500);
-      }
-    } catch (err: any) {
-      setErrorMessage(err.message || 'Something went wrong');
-    } finally {
+    onCompanyAdded(newCompany);
+    setSuccessMessage(true);
+    setTimeout(() => {
+      setSuccessMessage(false);
+      setName('');
+      setLinkedinUrl('');
+      setCareerUrl('');
+      setLogoUrl('');
+      onClose();
       setSubmitting(false);
-    }
+    }, 1200);
   };
 
   return (

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { CompaniesList } from './components/CompaniesList';
@@ -11,54 +11,61 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<ActiveTab>('home');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCity, setSelectedCity] = useState('All');
-  const [companies, setCompanies] = useState<Company[]>([]);
-  const [cities, setCities] = useState<CityOption[]>([]);
+  const [allCompanies, setAllCompanies] = useState<Company[]>([]);
   const [loading, setLoading] = useState(true);
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
 
-  // Fetch companies dynamically from API endpoint
-  const fetchCompanies = useCallback(async (query: string, city: string) => {
-    setLoading(true);
-    try {
-      const params = new URLSearchParams();
-      if (query) params.append('search', query);
-      if (city && city !== 'All') params.append('city', city);
-
-      const res = await fetch(`/api/companies?${params.toString()}`);
-      if (res.ok) {
-        const data = await res.json();
-        setCompanies(data);
+  useEffect(() => {
+    async function loadCompanies() {
+      setLoading(true);
+      try {
+        const res = await fetch('/companies.json');
+        if (res.ok) {
+          const data = await res.json();
+          setAllCompanies(data);
+        }
+      } catch (err) {
+        console.error('Error loading companies:', err);
+      } finally {
+        setLoading(false);
       }
-    } catch (err) {
-      console.error('Error fetching companies:', err);
-    } finally {
-      setLoading(false);
     }
+    loadCompanies();
   }, []);
 
-  // Fetch cities list with counts
-  const fetchCities = useCallback(async () => {
-    try {
-      const res = await fetch('/api/cities');
-      if (res.ok) {
-        const data = await res.json();
-        setCities(data);
-      }
-    } catch (err) {
-      console.error('Error fetching cities:', err);
-    }
-  }, []);
+  // Compute filtered companies client-side
+  const filteredCompanies = useMemo(() => {
+    return allCompanies.filter((company) => {
+      const query = searchQuery.toLowerCase().trim();
+      const matchesSearch =
+        !query ||
+        company.name.toLowerCase().includes(query) ||
+        company.city.toLowerCase().includes(query);
 
-  useEffect(() => {
-    fetchCompanies(searchQuery, selectedCity);
-  }, [searchQuery, selectedCity, fetchCompanies]);
+      const matchesCity =
+        selectedCity === 'All' ||
+        company.city.toLowerCase() === selectedCity.toLowerCase();
 
-  useEffect(() => {
-    fetchCities();
-  }, [fetchCities]);
+      return matchesSearch && matchesCity;
+    });
+  }, [allCompanies, searchQuery, selectedCity]);
+
+  // Compute city stats dynamically from allCompanies
+  const cities: CityOption[] = useMemo(() => {
+    const counts: Record<string, number> = {};
+    allCompanies.forEach((c) => {
+      const city = c.city || 'Islamabad';
+      counts[city] = (counts[city] || 0) + 1;
+    });
+
+    const standardCities = ['Islamabad'];
+    return standardCities.map((cityName) => ({
+      name: cityName,
+      count: counts[cityName] || 0,
+    }));
+  }, [allCompanies]);
 
   const handleSearchSubmit = () => {
-    // If on home tab, scrolling down or showing companies is natural
     if (activeTab === 'home') {
       const listElement = document.getElementById('companies-section');
       if (listElement) {
@@ -73,8 +80,7 @@ export default function App() {
   };
 
   const handleCompanyAdded = (newCompany: Company) => {
-    setCompanies((prev) => [newCompany, ...prev]);
-    fetchCities();
+    setAllCompanies((prev) => [newCompany, ...prev]);
   };
 
   return (
@@ -86,7 +92,7 @@ export default function App() {
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
         onOpenAddModal={() => setIsAddModalOpen(true)}
-        totalCompaniesCount={companies.length}
+        totalCompaniesCount={filteredCompanies.length}
       />
 
       {/* Main Content Area based on Tab */}
@@ -100,12 +106,12 @@ export default function App() {
               setSelectedCity={setSelectedCity}
               cities={cities}
               onSearchSubmit={handleSearchSubmit}
-              totalCompanies={companies.length}
+              totalCompanies={filteredCompanies.length}
             />
 
             <div id="companies-section">
               <CompaniesList
-                companies={companies}
+                companies={filteredCompanies}
                 loading={loading}
                 selectedCity={selectedCity}
                 setSelectedCity={setSelectedCity}
@@ -120,7 +126,7 @@ export default function App() {
         {activeTab === 'companies' && (
           <div className="pt-6">
             <CompaniesList
-              companies={companies}
+              companies={filteredCompanies}
               loading={loading}
               selectedCity={selectedCity}
               setSelectedCity={setSelectedCity}
