@@ -1,20 +1,147 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# 🚀 Numl Career Hub
 
-# Run and deploy your AI Studio app
+A modern and responsive web application that helps students discover software houses in Islamabad along with their official LinkedIn and Career pages.
 
-This contains everything you need to run your app locally.
+## 🌟 Features
 
-View your app in AI Studio: https://ai.studio/apps/ed78a444-2b28-4e7a-a26c-886db464d530
+- 🔍 Search software houses by name
+- 📍 Filter companies by city
+- 💼 View official LinkedIn pages
+- 🌐 Access company career portals
+- 📱 Fully responsive design
+- ⚡ Fast performance with Vite + React
+- 🎨 Modern dark UI
+- ➕ Suggest new software houses
 
-## Run Locally
+---
 
-**Prerequisites:**  Node.js
+## 🛠️ Tech Stack
 
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Express (Development)
+- JSON Data Storage
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+---
+
+## 📂 Project Structure
+
+```
+Pak-Career-Hub/
+│
+├── src/
+│   ├── components/
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+│
+├── public/
+├── data/
+│   └── companies.json
+│
+├── package.json
+├── vite.config.ts
+├── tsconfig.json
+└── README.md
+```
+
+---
+
+## 🚀 Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/pak-career-hub.git
+```
+
+Go to the project folder
+
+```bash
+cd pak-career-hub
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run the development server
+
+```bash
+npm run dev
+```
+
+Open your browser
+
+```
+http://localhost:5173
+```
+
+---
+
+## 📷 Preview
+
+- Responsive Home Page
+- Search Software Houses
+- Company Cards
+- LinkedIn & Career Links
+- About Section
+
+---
+
+## 🎯 Purpose
+
+Pak Career Hub is designed to help students quickly discover software houses, explore official LinkedIn pages, and access career opportunities from one place.
+
+---
+
+## 📌 Future Improvements
+
+- Multiple Cities Support
+- Company Categories
+- Internship Listings
+- Favorites
+- Admin Dashboard
+- Company Reviews
+- Advanced Search
+- Backend Database Integration
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Push your branch
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Developer
+
+**Raja Muhammad Hassan**
+
+BS Software Engineering Student
+
+GitHub:
+https://github.com/RajaMuhammadHassan
+
+LinkedIn:
+https://www.linkedin.com/in/raja-muhammad-hassan/
+
+---
+
+⭐ If you found this project useful, don't forget to give it a star.
