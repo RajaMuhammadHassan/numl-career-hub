@@ -5,6 +5,8 @@ import { CompaniesList } from './components/CompaniesList';
 import { About } from './components/About';
 import { Footer } from './components/Footer';
 import { AddCompanyModal } from './components/AddCompanyModal';
+import { FeedbackSection } from './components/FeedbackSection';
+import { FeedbackModal } from './components/FeedbackModal';
 import { Company, CityOption, ActiveTab } from './types';
 
 export default function App() {
@@ -14,6 +16,7 @@ export default function App() {
   const [allCompanies, setAllCompanies] = useState<Company[]>([]);
   const [loading, setLoading] = useState(true);
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+  const [isFeedbackModalOpen, setIsFeedbackModalOpen] = useState(false);
 
   useEffect(() => {
     async function loadCompanies() {
@@ -92,6 +95,7 @@ export default function App() {
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
         onOpenAddModal={() => setIsAddModalOpen(true)}
+        onOpenFeedbackModal={() => setIsFeedbackModalOpen(true)}
         totalCompaniesCount={filteredCompanies.length}
       />
 
@@ -138,6 +142,9 @@ export default function App() {
         )}
 
         {activeTab === 'about' && <About />}
+
+        {/* Community Feedback & Report Issue Section */}
+        <FeedbackSection onOpenFeedbackModal={() => setIsFeedbackModalOpen(true)} />
       </main>
 
       {/* Footer */}
@@ -148,6 +155,12 @@ export default function App() {
         isOpen={isAddModalOpen}
         onClose={() => setIsAddModalOpen(false)}
         onCompanyAdded={handleCompanyAdded}
+      />
+
+      {/* Embedded Google Form Feedback Modal */}
+      <FeedbackModal
+        isOpen={isFeedbackModalOpen}
+        onClose={() => setIsFeedbackModalOpen(false)}
       />
     </div>
   );

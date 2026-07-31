@@ -13,3 +13,4 @@ export interface CityOption {
 }
 
 export type ActiveTab = 'home' | 'companies' | 'about';
+

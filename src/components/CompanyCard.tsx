@@ -24,17 +24,17 @@ export const CompanyCard: React.FC<CompanyCardProps> = ({ company }) => {
       <div>
         {/* Top Header: Logo & City */}
         <div className="flex items-start justify-between gap-3 mb-4">
-          <div className="w-12 h-12 bg-white rounded-xl border border-[#2d3322] p-1.5 flex items-center justify-center overflow-hidden shrink-0">
+          <div className="w-12 h-12 bg-[#1c2014] rounded-xl border border-[#3a422b] p-1.5 flex items-center justify-center overflow-hidden shrink-0 group-hover:border-[#a3e635] transition-colors">
             {!imageError && company.logo ? (
               <img
                 src={company.logo}
                 alt={`${company.name} logo`}
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-full object-contain rounded-lg"
                 onError={() => setImageError(true)}
                 loading="lazy"
               />
             ) : (
-              <div className="w-full h-full rounded-lg bg-[#1a1d14] flex items-center justify-center text-[#a3e635] font-heading font-bold text-sm">
+              <div className="w-full h-full rounded-lg bg-[#252b1b] flex items-center justify-center text-[#a3e635] font-heading font-bold text-sm">
                 {getInitials(company.name)}
               </div>
             )}

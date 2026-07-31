@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Building2, Search, Menu, X } from 'lucide-react';
+import { Building2, Search, Menu, X, MessageSquarePlus } from 'lucide-react';
 import { ActiveTab } from '../types';
 
 interface NavbarProps {
@@ -8,6 +8,7 @@ interface NavbarProps {
   searchQuery: string;
   setSearchQuery: (query: string) => void;
   onOpenAddModal: () => void;
+  onOpenFeedbackModal: () => void;
   totalCompaniesCount: number;
 }
 
@@ -17,6 +18,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   searchQuery,
   setSearchQuery,
   onOpenAddModal,
+  onOpenFeedbackModal,
   totalCompaniesCount,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -33,6 +35,11 @@ export const Navbar: React.FC<NavbarProps> = ({
     }
   };
 
+  const handleReportIssueClick = () => {
+    setMobileMenuOpen(false);
+    onOpenFeedbackModal();
+  };
+
   return (
     <header className="sticky top-0 z-40 bg-[#15170f]/90 backdrop-blur-md border-b border-[#2d3322]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
@@ -40,16 +47,18 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Logo */}
         <div 
           onClick={() => handleNavClick('home')}
-          className="flex items-center gap-2.5 cursor-pointer group select-none"
+          className="flex items-center gap-3 cursor-pointer group select-none"
         >
-          <div className="w-8 h-8 bg-[#a3e635] rounded-lg flex items-center justify-center text-[#0d0e0a] shadow-md shadow-[#a3e635]/20 group-hover:scale-105 transition-transform duration-200">
-            <Building2 className="w-5 h-5 stroke-[2.5]" />
-          </div>
+          <img
+            src="/images/numl-logo.svg"
+            alt="NUML University Logo"
+            className="w-10 h-10 sm:w-[42px] sm:h-[42px] object-contain shrink-0 group-hover:scale-105 transition-transform duration-200"
+          />
           <div>
-            <span className="font-heading font-extrabold text-xl tracking-tight text-white group-hover:text-[#a3e635] transition-colors block leading-tight">
+            <span className="font-heading font-extrabold text-lg sm:text-xl tracking-tight text-white group-hover:text-[#a3e635] transition-colors block leading-tight">
               NUML Career<span className="text-[#a3e635]"> Hub</span>
             </span>
-            <p className="text-xs text-stone-400 font-medium">
+            <p className="text-[11px] sm:text-xs text-stone-400 font-medium">
               Islamabad Software Houses
             </p>
           </div>
@@ -100,9 +109,9 @@ export const Navbar: React.FC<NavbarProps> = ({
           </button>
         </nav>
 
-        {/* Right Search Box */}
+        {/* Right Search Box & Actions */}
         <div className="hidden lg:flex items-center gap-3">
-          <div className="relative w-64">
+          <div className="relative w-56">
             <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-stone-500" />
             <input
               type="text"
@@ -112,6 +121,15 @@ export const Navbar: React.FC<NavbarProps> = ({
               className="w-full bg-[#1c2014] text-xs text-stone-200 placeholder-stone-500 pl-9 pr-3 py-1.5 rounded-full border border-[#3a422b] focus:outline-none focus:border-[#a3e635] focus:ring-1 focus:ring-[#a3e635] transition-all"
             />
           </div>
+
+          <button
+            onClick={handleReportIssueClick}
+            className="flex items-center gap-1.5 text-xs font-bold px-3.5 py-1.5 rounded-full bg-[#1c2014] hover:bg-[#252b1b] text-stone-300 hover:text-[#a3e635] border border-[#3a422b] transition-all hover:border-[#a3e635] cursor-pointer"
+            title="Report Issue or Suggest a Company"
+          >
+            <MessageSquarePlus className="w-3.5 h-3.5 text-[#a3e635]" />
+            <span>Report Issue</span>
+          </button>
         </div>
 
         {/* Mobile menu button */}
@@ -175,6 +193,14 @@ export const Navbar: React.FC<NavbarProps> = ({
               }`}
             >
               About
+            </button>
+
+            <button
+              onClick={handleReportIssueClick}
+              className="w-full text-left px-4 py-2.5 rounded-xl font-bold text-xs text-[#a3e635] hover:bg-[#1c2014] flex items-center gap-2 border border-[#3a422b]/50 mt-1 cursor-pointer"
+            >
+              <MessageSquarePlus className="w-4 h-4" />
+              <span>Report Issue / Feedback</span>
             </button>
           </div>
         </div>

@@ -8,9 +8,11 @@ export const Footer: React.FC = () => {
         
         {/* Logo and Tagline */}
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-[#a3e635] flex items-center justify-center text-[#0d0e0a]">
-            <Building2 className="w-4 h-4 stroke-[2.5]" />
-          </div>
+          <img
+            src="/images/numl-logo.svg"
+            alt="NUML University Logo"
+            className="w-8 h-8 object-contain"
+          />
           <span className="font-heading font-extrabold text-lg text-white">
             NUML Career<span className="text-[#a3e635]"> Hub</span>
           </span>
@@ -32,3 +34,4 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
+
