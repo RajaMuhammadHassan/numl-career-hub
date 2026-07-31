@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
         {/* Logo and Tagline */}
         <div className="flex items-center gap-2.5">
           <img
-            src="/images/numl-logo.svg"
+            src="/images/numl-logo.png"
             alt="NUML University Logo"
             className="w-8 h-8 object-contain"
           />
