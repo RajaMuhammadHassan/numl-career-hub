@@ -49,7 +49,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           className="flex items-center gap-3 cursor-pointer group select-none"
         >
           <img
-            src="/images/numl-logo.svg"
+            src="/images/numl-logo.png"
             alt="NUML University Logo"
             className="w-[36px] h-[36px] sm:w-[44px] sm:h-[44px] rounded-full object-contain shrink-0 group-hover:scale-105 transition-transform duration-200"
           />
