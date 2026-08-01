@@ -7,8 +7,8 @@
   }
   
   body {
-    background-color: #0d0e0a;
-    color: #f5f5f4;
+    background-color: #f8fafc;
+    color: #0f172a;
     font-family: var(--font-body);
   }
 
@@ -17,54 +17,27 @@
   }
 }
 
-/* Sleek Interface accent color highlights */
-.text-olive-accent {
-  color: #a3e635;
-}
-
-.bg-olive-accent {
-  background-color: #a3e635;
-}
-
-.bg-olive-muted {
-  background-color: rgba(163, 230, 53, 0.12);
-}
-
-.border-olive-subtle {
-  border-color: #2d3322;
-}
-
-.border-olive-active {
-  border-color: #a3e635;
-}
-
-/* Glass & Card styles */
-.dark-card {
-  background-color: #1a1d14;
-  border: 1px solid #2d3322;
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.dark-card:hover {
-  border-color: #a3e635;
-  box-shadow: 0 14px 40px -10px rgba(163, 230, 53, 0.15);
-  transform: translateY(-2px);
-}
-
 /* Custom subtle scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0d0e0a;
+  background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2d3322;
+  background: #cbd5e1;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3a422b;
+  background: #94a3b8;
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Building2, Search, Menu, X, MessageSquarePlus } from 'lucide-react';
+import { Search, Menu, X, MessageSquarePlus } from 'lucide-react';
 import { ActiveTab } from '../types';
 
 interface NavbarProps {
@@ -17,7 +17,6 @@ export const Navbar: React.FC<NavbarProps> = ({
   setActiveTab,
   searchQuery,
   setSearchQuery,
-  onOpenAddModal,
   onOpenFeedbackModal,
   totalCompaniesCount,
 }) => {
@@ -41,37 +40,37 @@ export const Navbar: React.FC<NavbarProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-[#15170f]/90 backdrop-blur-md border-b border-[#2d3322]">
+    <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
         
-        {/* Logo */}
+        {/* Logo & Title */}
         <div 
           onClick={() => handleNavClick('home')}
           className="flex items-center gap-3 cursor-pointer group select-none"
         >
           <img
-            src="/images/numl-logo.png"
+            src="/images/numl-logo.svg"
             alt="NUML University Logo"
-            className="w-10 h-10 sm:w-[42px] sm:h-[42px] object-contain shrink-0 group-hover:scale-105 transition-transform duration-200"
+            className="w-[36px] h-[36px] sm:w-[44px] sm:h-[44px] rounded-full object-contain shrink-0 group-hover:scale-105 transition-transform duration-200"
           />
           <div>
-            <span className="font-heading font-extrabold text-lg sm:text-xl tracking-tight text-white group-hover:text-[#a3e635] transition-colors block leading-tight">
-              NUML Career<span className="text-[#a3e635]"> Hub</span>
+            <span className="font-heading font-extrabold text-lg sm:text-xl tracking-tight text-slate-900 group-hover:text-[#0056D2] transition-colors block leading-tight">
+              NUML Career<span className="text-[#0056D2]"> Hub</span>
             </span>
-            <p className="text-[11px] sm:text-xs text-stone-400 font-medium">
+            <p className="text-[11px] sm:text-xs text-slate-500 font-medium">
               Islamabad Software Houses
             </p>
           </div>
         </div>
 
         {/* Center Navigation Links */}
-        <nav className="hidden md:flex items-center gap-1 bg-[#1c2014] px-3 py-1.5 rounded-full border border-[#3a422b]">
+        <nav className="hidden md:flex items-center gap-1 bg-slate-100/90 p-1.5 rounded-full border border-slate-200/80">
           <button
             onClick={() => handleNavClick('home')}
             className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all ${
               activeTab === 'home'
-                ? 'bg-[#a3e635] text-[#0d0e0a] shadow-md shadow-[#a3e635]/25'
-                : 'text-stone-400 hover:text-white hover:bg-[#252b1b]'
+                ? 'bg-[#0056D2] text-white shadow-md shadow-[#0056D2]/25'
+                : 'text-slate-600 hover:text-[#0056D2] hover:bg-white/80'
             }`}
           >
             Home
@@ -81,16 +80,16 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={() => handleNavClick('companies')}
             className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all flex items-center gap-2 ${
               activeTab === 'companies'
-                ? 'bg-[#a3e635] text-[#0d0e0a] shadow-md shadow-[#a3e635]/25'
-                : 'text-stone-400 hover:text-white hover:bg-[#252b1b]'
+                ? 'bg-[#0056D2] text-white shadow-md shadow-[#0056D2]/25'
+                : 'text-slate-600 hover:text-[#0056D2] hover:bg-white/80'
             }`}
           >
             <span>Companies</span>
             {totalCompaniesCount > 0 && (
-              <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-extrabold ${
+              <span className={`text-[10px] px-2 py-0.5 rounded-full font-extrabold ${
                 activeTab === 'companies' 
-                  ? 'bg-[#0d0e0a]/30 text-[#0d0e0a]' 
-                  : 'bg-[#2d3322] text-[#a3e635]'
+                  ? 'bg-white/20 text-white' 
+                  : 'bg-blue-100 text-[#0056D2]'
               }`}>
                 {totalCompaniesCount}
               </span>
@@ -101,8 +100,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={() => handleNavClick('about')}
             className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all ${
               activeTab === 'about'
-                ? 'bg-[#a3e635] text-[#0d0e0a] shadow-md shadow-[#a3e635]/25'
-                : 'text-stone-400 hover:text-white hover:bg-[#252b1b]'
+                ? 'bg-[#0056D2] text-white shadow-md shadow-[#0056D2]/25'
+                : 'text-slate-600 hover:text-[#0056D2] hover:bg-white/80'
             }`}
           >
             About
@@ -112,22 +111,22 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Right Search Box & Actions */}
         <div className="hidden lg:flex items-center gap-3">
           <div className="relative w-56">
-            <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-stone-500" />
+            <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
             <input
               type="text"
               value={searchQuery}
               onChange={handleSearchChange}
               placeholder="Search software houses..."
-              className="w-full bg-[#1c2014] text-xs text-stone-200 placeholder-stone-500 pl-9 pr-3 py-1.5 rounded-full border border-[#3a422b] focus:outline-none focus:border-[#a3e635] focus:ring-1 focus:ring-[#a3e635] transition-all"
+              className="w-full bg-slate-100 text-xs text-slate-800 placeholder-slate-400 pl-9 pr-3 py-1.5 rounded-full border border-slate-200 focus:bg-white focus:outline-none focus:border-[#0056D2] focus:ring-1 focus:ring-[#0056D2] transition-all"
             />
           </div>
 
           <button
             onClick={handleReportIssueClick}
-            className="flex items-center gap-1.5 text-xs font-bold px-3.5 py-1.5 rounded-full bg-[#1c2014] hover:bg-[#252b1b] text-stone-300 hover:text-[#a3e635] border border-[#3a422b] transition-all hover:border-[#a3e635] cursor-pointer"
+            className="flex items-center gap-1.5 text-xs font-bold px-3.5 py-1.5 rounded-full bg-blue-50/80 hover:bg-[#0056D2] text-[#0056D2] hover:text-white border border-blue-200/80 hover:border-[#0056D2] transition-all cursor-pointer shadow-2xs"
             title="Report Issue or Suggest a Company"
           >
-            <MessageSquarePlus className="w-3.5 h-3.5 text-[#a3e635]" />
+            <MessageSquarePlus className="w-3.5 h-3.5" />
             <span>Report Issue</span>
           </button>
         </div>
@@ -136,7 +135,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="flex md:hidden items-center gap-2">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-xl bg-[#1c2014] text-stone-300 hover:text-white border border-[#3a422b]"
+            className="p-2 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200"
             aria-label="Toggle Navigation Menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -146,15 +145,15 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-[#2d3322] bg-[#15170f] px-4 pt-3 pb-5 space-y-3">
+        <div className="md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-5 space-y-3 shadow-lg">
           <div className="relative mb-3">
-            <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-stone-500" />
+            <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
             <input
               type="text"
               value={searchQuery}
               onChange={handleSearchChange}
               placeholder="Search companies by name..."
-              className="w-full bg-[#1c2014] text-xs text-stone-200 placeholder-stone-500 pl-9 pr-3 py-2 rounded-full border border-[#3a422b] focus:outline-none focus:border-[#a3e635]"
+              className="w-full bg-slate-100 text-xs text-slate-800 placeholder-slate-400 pl-9 pr-3 py-2 rounded-full border border-slate-200 focus:bg-white focus:outline-none focus:border-[#0056D2]"
             />
           </div>
 
@@ -163,8 +162,8 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => handleNavClick('home')}
               className={`w-full text-left px-4 py-2.5 rounded-xl font-bold text-xs ${
                 activeTab === 'home'
-                  ? 'bg-[#a3e635] text-[#0d0e0a]'
-                  : 'text-stone-300 hover:bg-[#1c2014]'
+                  ? 'bg-[#0056D2] text-white'
+                  : 'text-slate-700 hover:bg-slate-100'
               }`}
             >
               Home
@@ -174,12 +173,14 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => handleNavClick('companies')}
               className={`w-full text-left px-4 py-2.5 rounded-xl font-bold text-xs flex items-center justify-between ${
                 activeTab === 'companies'
-                  ? 'bg-[#a3e635] text-[#0d0e0a]'
-                  : 'text-stone-300 hover:bg-[#1c2014]'
+                  ? 'bg-[#0056D2] text-white'
+                  : 'text-slate-700 hover:bg-slate-100'
               }`}
             >
               <span>Companies</span>
-              <span className="text-[10px] px-2 py-0.5 rounded-full bg-black/20">
+              <span className={`text-[10px] px-2 py-0.5 rounded-full ${
+                activeTab === 'companies' ? 'bg-white/20 text-white' : 'bg-blue-100 text-[#0056D2]'
+              }`}>
                 {totalCompaniesCount}
               </span>
             </button>
@@ -188,8 +189,8 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => handleNavClick('about')}
               className={`w-full text-left px-4 py-2.5 rounded-xl font-bold text-xs ${
                 activeTab === 'about'
-                  ? 'bg-[#a3e635] text-[#0d0e0a]'
-                  : 'text-stone-300 hover:bg-[#1c2014]'
+                  ? 'bg-[#0056D2] text-white'
+                  : 'text-slate-700 hover:bg-slate-100'
               }`}
             >
               About
@@ -197,7 +198,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             <button
               onClick={handleReportIssueClick}
-              className="w-full text-left px-4 py-2.5 rounded-xl font-bold text-xs text-[#a3e635] hover:bg-[#1c2014] flex items-center gap-2 border border-[#3a422b]/50 mt-1 cursor-pointer"
+              className="w-full text-left px-4 py-2.5 rounded-xl font-bold text-xs text-[#0056D2] bg-blue-50/80 hover:bg-[#0056D2] hover:text-white flex items-center gap-2 border border-blue-200/80 mt-1 cursor-pointer transition-all"
             >
               <MessageSquarePlus className="w-4 h-4" />
               <span>Report Issue / Feedback</span>

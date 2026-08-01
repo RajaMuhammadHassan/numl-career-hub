@@ -87,7 +87,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#0d0e0a] text-stone-100 selection:bg-[#a3e635]/30 selection:text-[#a3e635]">
+    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800 selection:bg-[#0056D2]/20 selection:text-[#0056D2]">
       {/* Navigation */}
       <Navbar
         activeTab={activeTab}
@@ -128,17 +128,15 @@ export default function App() {
         )}
 
         {activeTab === 'companies' && (
-          <div className="pt-6">
-            <CompaniesList
-              companies={filteredCompanies}
-              loading={loading}
-              selectedCity={selectedCity}
-              setSelectedCity={setSelectedCity}
-              searchQuery={searchQuery}
-              setSearchQuery={setSearchQuery}
-              onResetFilters={handleResetFilters}
-            />
-          </div>
+          <CompaniesList
+            companies={filteredCompanies}
+            loading={loading}
+            selectedCity={selectedCity}
+            setSelectedCity={setSelectedCity}
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+            onResetFilters={handleResetFilters}
+          />
         )}
 
         {activeTab === 'about' && <About />}

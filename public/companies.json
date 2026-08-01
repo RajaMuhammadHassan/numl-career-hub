@@ -49,14 +49,6 @@
   },
   {
     "id": "7",
-    "name": "Xgrid",
-    "logo": "https://logo.clearbit.com/xgrid.co",
-    "city": "Islamabad",
-    "linkedin_url": "https://www.linkedin.com/company/xgrid.co/",
-    "career_url": "https://www.xgrid.co/careers"
-  },
-  {
-    "id": "8",
     "name": "Elixir Technologies",
     "logo": "https://logo.clearbit.com/elixir.com",
     "city": "Islamabad",
@@ -64,7 +56,7 @@
     "career_url": "https://www.elixir.com/careers"
   },
   {
-    "id": "9",
+    "id": "8",
     "name": "Uforia Infotech",
     "logo": "https://logo.clearbit.com/uforiainfotech.com",
     "city": "Islamabad",
@@ -72,15 +64,7 @@
     "career_url": "https://uforiainfotech.com/careers"
   },
   {
-    "id": "10",
-    "name": "Innovative Solutions",
-    "logo": "https://logo.clearbit.com/innovative-pk.com",
-    "city": "Islamabad",
-    "linkedin_url": "https://www.linkedin.com/company/innovative-private-limited/",
-    "career_url": "https://innovative-pk.com/careers"
-  },
-  {
-    "id": "11",
+    "id": "9",
     "name": "Cubix Pakistan",
     "logo": "https://logo.clearbit.com/cubix.co",
     "city": "Islamabad",
@@ -88,15 +72,7 @@
     "career_url": "https://www.cubix.co/careers"
   },
   {
-    "id": "12",
-    "name": "Mindbridge",
-    "logo": "https://logo.clearbit.com/mindbridge.com",
-    "city": "Islamabad",
-    "linkedin_url": "https://www.linkedin.com/company/mindbridge-bpo/",
-    "career_url": "https://www.mindbridge.com/careers"
-  },
-  {
-    "id": "13",
+    "id": "10",
     "name": "Emumba",
     "logo": "https://logo.clearbit.com/emumba.com",
     "city": "Islamabad",
@@ -104,7 +80,7 @@
     "career_url": "https://emumba.com/careers/"
   },
   {
-    "id": "14",
+    "id": "11",
     "name": "SadaPay",
     "logo": "https://logo.clearbit.com/sadapay.pk",
     "city": "Islamabad",
@@ -112,7 +88,7 @@
     "career_url": "https://sadapay.pk/careers/"
   },
   {
-    "id": "15",
+    "id": "12",
     "name": "Educative",
     "logo": "https://logo.clearbit.com/educative.io",
     "city": "Islamabad",
@@ -120,7 +96,7 @@
     "career_url": "https://www.educative.io/careers"
   },
   {
-    "id": "16",
+    "id": "13",
     "name": "Afiniti",
     "logo": "https://logo.clearbit.com/afiniti.com",
     "city": "Islamabad",
@@ -128,7 +104,7 @@
     "career_url": "https://www.afiniti.com/careers"
   },
   {
-    "id": "17",
+    "id": "14",
     "name": "Arbisoft",
     "logo": "https://logo.clearbit.com/arbisoft.com",
     "city": "Islamabad",
@@ -136,7 +112,7 @@
     "career_url": "https://arbisoft.com/careers/"
   },
   {
-    "id": "18",
+    "id": "15",
     "name": "Contour Software",
     "logo": "https://logo.clearbit.com/contour-software.com",
     "city": "Islamabad",
@@ -144,7 +120,7 @@
     "career_url": "https://contour-software.com/careers/"
   },
   {
-    "id": "19",
+    "id": "16",
     "name": "Strategic Systems International (SSI)",
     "logo": "https://logo.clearbit.com/ssi.com.pk",
     "city": "Islamabad",
