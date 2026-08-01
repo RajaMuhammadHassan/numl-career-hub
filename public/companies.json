@@ -2,7 +2,7 @@
   {
     "id": "1",
     "name": "10Pearls",
-    "logo": "https://logo.clearbit.com/10pearls.com",
+    "logo": "/images/10pearls.png",
     "city": "Islamabad",
     "linkedin_url": "https://www.linkedin.com/company/10pearls/",
     "career_url": "https://10pearls.com/careers/"
@@ -10,7 +10,7 @@
   {
     "id": "2",
     "name": "Systems Limited",
-    "logo": "https://logo.clearbit.com/systemsltd.com",
+    "logo": "/images/systems.png",
     "city": "Islamabad",
     "linkedin_url": "https://www.linkedin.com/company/systems-limited/",
     "career_url": "https://www.systemsltd.com/careers"
@@ -18,7 +18,7 @@
   {
     "id": "3",
     "name": "NETSOL Technologies",
-    "logo": "https://logo.clearbit.com/netsoltech.com",
+    "logo": "/images/netsol.png",
     "city": "Islamabad",
     "linkedin_url": "https://www.linkedin.com/company/netsol-technologies-inc-/",
     "career_url": "https://netsoltech.com/careers"
@@ -26,7 +26,7 @@
   {
     "id": "4",
     "name": "Devsinc",
-    "logo": "https://logo.clearbit.com/devsinc.com",
+    "logo": "/images/devsinc.png",
     "city": "Islamabad",
     "linkedin_url": "https://www.linkedin.com/company/devsinc/",
     "career_url": "https://www.devsinc.com/careers/"
@@ -34,7 +34,7 @@
   {
     "id": "5",
     "name": "VentureDive",
-    "logo": "https://logo.clearbit.com/venturedive.com",
+    "logo": "/images/venturedive.png",
     "city": "Islamabad",
     "linkedin_url": "https://www.linkedin.com/company/venturedive/",
     "career_url": "https://www.venturedive.com/careers/"
@@ -42,7 +42,7 @@
   {
     "id": "6",
     "name": "Motive",
-    "logo": "https://logo.clearbit.com/gomotive.com",
+    "logo": "/images/motive.png",
     "city": "Islamabad",
     "linkedin_url": "https://www.linkedin.com/company/gomotive/",
     "career_url": "https://gomotive.com/company/careers/"
@@ -50,7 +50,7 @@
   {
     "id": "7",
     "name": "Elixir Technologies",
-    "logo": "https://logo.clearbit.com/elixir.com",
+    "logo": "/images/elixir.png",
     "city": "Islamabad",
     "linkedin_url": "https://www.linkedin.com/company/elixir-technologies/",
     "career_url": "https://www.elixir.com/careers"
@@ -58,7 +58,7 @@
   {
     "id": "8",
     "name": "Uforia Infotech",
-    "logo": "https://logo.clearbit.com/uforiainfotech.com",
+    "logo": "/images/uforia.png",
     "city": "Islamabad",
     "linkedin_url": "https://www.linkedin.com/company/uforiainfotech/",
     "career_url": "https://uforiainfotech.com/careers"
@@ -66,7 +66,7 @@
   {
     "id": "9",
     "name": "Cubix Pakistan",
-    "logo": "https://logo.clearbit.com/cubix.co",
+    "logo": "/images/cubix.png",
     "city": "Islamabad",
     "linkedin_url": "https://www.linkedin.com/company/cubix-co/",
     "career_url": "https://www.cubix.co/careers"
@@ -74,7 +74,7 @@
   {
     "id": "10",
     "name": "Emumba",
-    "logo": "https://logo.clearbit.com/emumba.com",
+    "logo": "/images/emumba.png",
     "city": "Islamabad",
     "linkedin_url": "https://www.linkedin.com/company/emumba/",
     "career_url": "https://emumba.com/careers/"
@@ -82,7 +82,7 @@
   {
     "id": "11",
     "name": "SadaPay",
-    "logo": "https://logo.clearbit.com/sadapay.pk",
+    "logo": "/images/sadapay.png",
     "city": "Islamabad",
     "linkedin_url": "https://www.linkedin.com/company/sadapay/",
     "career_url": "https://sadapay.pk/careers/"
@@ -90,7 +90,7 @@
   {
     "id": "12",
     "name": "Educative",
-    "logo": "https://logo.clearbit.com/educative.io",
+    "logo": "/images/educative.png",
     "city": "Islamabad",
     "linkedin_url": "https://www.linkedin.com/company/educative-inc/",
     "career_url": "https://www.educative.io/careers"
@@ -98,7 +98,7 @@
   {
     "id": "13",
     "name": "Afiniti",
-    "logo": "https://logo.clearbit.com/afiniti.com",
+    "logo": "/images/afiniti.png",
     "city": "Islamabad",
     "linkedin_url": "https://www.linkedin.com/company/afiniti/",
     "career_url": "https://www.afiniti.com/careers"
@@ -106,7 +106,7 @@
   {
     "id": "14",
     "name": "Arbisoft",
-    "logo": "https://logo.clearbit.com/arbisoft.com",
+    "logo": "/images/arbisoft.png",
     "city": "Islamabad",
     "linkedin_url": "https://www.linkedin.com/company/arbisoft/",
     "career_url": "https://arbisoft.com/careers/"
@@ -114,17 +114,9 @@
   {
     "id": "15",
     "name": "Contour Software",
-    "logo": "https://logo.clearbit.com/contour-software.com",
+    "logo": "/images/contour.png",
     "city": "Islamabad",
     "linkedin_url": "https://www.linkedin.com/company/contour-software/",
     "career_url": "https://contour-software.com/careers/"
-  },
-  {
-    "id": "16",
-    "name": "Strategic Systems International (SSI)",
-    "logo": "https://logo.clearbit.com/ssi.com.pk",
-    "city": "Islamabad",
-    "linkedin_url": "https://www.linkedin.com/company/strategic-systems-international/",
-    "career_url": "https://ssi.com.pk/careers/"
   }
 ]
