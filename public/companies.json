@@ -4,6 +4,7 @@
     "name": "10Pearls",
     "logo": "/images/10pearls.png",
     "city": "Islamabad",
+    "description": "Global digital transformation agency specializing in custom mobile apps, cloud engineering, and AI solutions.",
     "linkedin_url": "https://www.linkedin.com/company/10pearls/",
     "career_url": "https://10pearls.com/careers/"
   },
@@ -12,6 +13,7 @@
     "name": "Systems Limited",
     "logo": "/images/systems.png",
     "city": "Islamabad",
+    "description": "Pakistan's premier tech conglomerate offering large-scale enterprise IT solutions, cloud computing, and ERP systems.",
     "linkedin_url": "https://www.linkedin.com/company/systems-limited/",
     "career_url": "https://www.systemsltd.com/careers"
   },
@@ -20,6 +22,7 @@
     "name": "NETSOL Technologies",
     "logo": "/images/netsol.png",
     "city": "Islamabad",
+    "description": "Global leader in enterprise software solutions for the asset finance and leasing industry.",
     "linkedin_url": "https://www.linkedin.com/company/netsol-technologies-inc-/",
     "career_url": "https://netsoltech.com/careers"
   },
@@ -28,6 +31,7 @@
     "name": "Devsinc",
     "logo": "/images/devsinc.png",
     "city": "Islamabad",
+    "description": "Fast-growing software development company specializing in full-stack web, mobile apps, and tech talent outsourcing.",
     "linkedin_url": "https://www.linkedin.com/company/devsinc/",
     "career_url": "https://www.devsinc.com/careers/"
   },
@@ -36,6 +40,7 @@
     "name": "VentureDive",
     "logo": "/images/venturedive.png",
     "city": "Islamabad",
+    "description": "Technology studio building high-impact digital products, mobility services, and enterprise software.",
     "linkedin_url": "https://www.linkedin.com/company/venturedive/",
     "career_url": "https://www.venturedive.com/careers/"
   },
@@ -44,6 +49,7 @@
     "name": "Motive",
     "logo": "/images/motive.png",
     "city": "Islamabad",
+    "description": "Silicon Valley-backed IoT & AI company building automated fleet management and driver safety solutions.",
     "linkedin_url": "https://www.linkedin.com/company/gomotive/",
     "career_url": "https://gomotive.com/company/careers/"
   },
@@ -52,6 +58,7 @@
     "name": "Elixir Technologies",
     "logo": "/images/elixir.png",
     "city": "Islamabad",
+    "description": "Specializes in Customer Communication Management (CCM) SaaS platforms for telecom, healthcare, and insurance.",
     "linkedin_url": "https://www.linkedin.com/company/elixir-technologies/",
     "career_url": "https://www.elixir.com/careers"
   },
@@ -60,6 +67,7 @@
     "name": "Uforia Infotech",
     "logo": "/images/uforia.png",
     "city": "Islamabad",
+    "description": "Full-service software consultancy building custom web, mobile, and cloud applications for global clients.",
     "linkedin_url": "https://www.linkedin.com/company/uforiainfotech/",
     "career_url": "https://uforiainfotech.com/careers"
   },
@@ -68,6 +76,7 @@
     "name": "Cubix Pakistan",
     "logo": "/images/cubix.png",
     "city": "Islamabad",
+    "description": "Product development agency known for game development, AR/VR experiences, and high-performance mobile apps.",
     "linkedin_url": "https://www.linkedin.com/company/cubix-co/",
     "career_url": "https://www.cubix.co/careers"
   },
@@ -76,6 +85,7 @@
     "name": "Emumba",
     "logo": "/images/emumba.png",
     "city": "Islamabad",
+    "description": "Engineering firm focused on cloud infrastructure, DevOps, fintech platforms, and low-latency applications.",
     "linkedin_url": "https://www.linkedin.com/company/emumba/",
     "career_url": "https://emumba.com/careers/"
   },
@@ -84,6 +94,7 @@
     "name": "SadaPay",
     "logo": "/images/sadapay.png",
     "city": "Islamabad",
+    "description": "Leading Pakistani FinTech platform revolutionizing digital banking, payment cards, and freelancer transactions.",
     "linkedin_url": "https://www.linkedin.com/company/sadapay/",
     "career_url": "https://sadapay.pk/careers/"
   },
@@ -92,6 +103,7 @@
     "name": "Educative",
     "logo": "/images/educative.png",
     "city": "Islamabad",
+    "description": "Global interactive EdTech learning platform providing text-based, hands-on coding courses for developers.",
     "linkedin_url": "https://www.linkedin.com/company/educative-inc/",
     "career_url": "https://www.educative.io/careers"
   },
@@ -100,6 +112,7 @@
     "name": "Afiniti",
     "logo": "/images/afiniti.png",
     "city": "Islamabad",
+    "description": "Enterprise AI company specializing in behavioral pairing algorithms to optimize customer service interactions.",
     "linkedin_url": "https://www.linkedin.com/company/afiniti/",
     "career_url": "https://www.afiniti.com/careers"
   },
@@ -108,6 +121,7 @@
     "name": "Arbisoft",
     "logo": "/images/arbisoft.png",
     "city": "Islamabad",
+    "description": "Software house building custom web platforms, data solutions, mobile apps, and EdTech platforms like edX.",
     "linkedin_url": "https://www.linkedin.com/company/arbisoft/",
     "career_url": "https://arbisoft.com/careers/"
   },
@@ -116,6 +130,7 @@
     "name": "Contour Software",
     "logo": "/images/contour.png",
     "city": "Islamabad",
+    "description": "Subsidiary of Constellation Software Inc., managing specialized enterprise software products across global verticals.",
     "linkedin_url": "https://www.linkedin.com/company/contour-software/",
     "career_url": "https://contour-software.com/careers/"
   }
