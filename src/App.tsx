@@ -10,16 +10,7 @@ import { FeedbackModal } from './components/FeedbackModal';
 import { Company, CityOption, ActiveTab } from './types';
 import { Analytics } from '@vercel/analytics/react';
 
-export default function App() {
-  return (
-    <div>
-      {/* Aapka baqi poora component code yahan hoga */}
 
-      {/* Analytics Component Add Karein */}
-      <Analytics />
-    </div>
-  );
-}
 export default function App() {
   const [activeTab, setActiveTab] = useState<ActiveTab>('home');
   const [searchQuery, setSearchQuery] = useState('');
@@ -171,6 +162,7 @@ export default function App() {
         isOpen={isFeedbackModalOpen}
         onClose={() => setIsFeedbackModalOpen(false)}
       />
+      <Analytics />
     </div>
   );
 }
